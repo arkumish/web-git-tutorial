@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    text-align: left;
+}
+
+.container {
+    position: relative;
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto; /* Center it */
+}
+
+.container .content {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgba(0, 0, 0, 0); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
+}
+
+#London {background-color:#d50000;}
+#Paris {background-color:#2e7d32;}
+#Tokyo {background-color:#0277bd;}
+#Oslo {background-color:#ef6c00;}
+</style>
+</head>
+<body>
+
+
+
+<div id="London" class="tabcontent">
+  <h1>KISAN SEVA </h1>
+  <p>A revolutionaly way to change life of farmers.</p>
+  
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>KISAN SEVA </h3>
+  <p>A revolutionaly way to change life of farmers.</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>KISAN SEVA </h3>
+  <p>A revolutionaly way to change life of farmers.</p>
+</div>
+
+ <div class="container">
+  <img src="images/ag2.jpg" alt="Notebook" style="width:100%;">
+  <div class="content">
+    <div id="Oslo" class="tabcontent">
+  <h3>KISAN SEVA </h3>
+  <p>A revolutionaly way to change life of farmers.</p>
+</div>
+  </div>
+</div> 
+<div id="Oslo" class="tabcontent">
+  <h3>KISAN SEVA </h3>
+  <p>A revolutionaly way to change life of farmers.</p>
+</div>
+
+<button class="tablink" onclick="openCity('London', this, '#e53935')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openCity('Paris', this, 'green')">Farmer</button>
+<button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Buyer</button>
+<button class="tablink" onclick="openCity('Oslo', this, 'orange')">Transport</button>
+
+<script>
+function openCity(cityName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(cityName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html> 
